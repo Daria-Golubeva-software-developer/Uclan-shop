@@ -1,0 +1,85 @@
+.container{
+	padding: 0 320px;'
+	
+	
+}
+
+img{
+	width: 200px;
+	height:80px;
+}
+.upper{
+	background-color: #BE1622 ;
+	color: white;
+	display: flex; 
+	align-items: center; 
+	text-align: center; 
+	padding: 0 20px; 
+	justify-content: space-between; 
+	/* font-family: Verdana;  */
+	/* size: 20px; */
+}
+.menu a{
+	color: white;
+	margin-left: 20px;
+	text-decoration: none;
+	
+}
+.logo_and_text {
+    display: flex;
+    align-items: center;
+}
+.logo_and_text h3 {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.opportunity{
+   color: #34516C;
+   font-family: Helvetica;
+   font-size: 36px;
+   font-weight: bold;
+   
+}
+.main_text{
+	font-family: Helvetica;
+	font-size: 16px;
+	
+}
+.student_union{
+	font-family: Helvetica;
+	font-size: 16px;
+	
+}
+.together{
+	font-family: Helvetica;
+	font-size: 32px;
+	color: #F2BE1A;
+	
+}
+.community{
+	font-family: Helvetica;
+	font-size: 32px;
+	color: #F2BE1A;
+	
+}
+.video1{
+	
+	display: flex;
+	justify-content: center; 
+	/* align-items: center; */
+}
+.video2{
+	
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+footer{
+	margin-top: 30px;
+	background-color: #34516C;
+	justify-content: space-between;
+	color: white;
+	display: flex;
+	padding: 30px;
+}
