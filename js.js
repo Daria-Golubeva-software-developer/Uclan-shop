@@ -1,29 +1,168 @@
 
-const tshirts = [
-['Legacy T-Shirt','Red','£7.99','good-stock','resources/images/tshirts/tshirt1.jpg','Perfect for those graduating this year. Get a bargain whilst we have the stock.'],
-['Legacy T-Shirt','Green','£7.99','last-few','resources/images/tshirts/tshirt2.jpg','Limited stock. Grab these nostalgic items before they make their way onto eBay.'],
-['Legacy T-Shirt','Blue','£7.99','out-of-stock','resources/images/tshirts/tshirt3.jpg','Sadly we are sold out of this legendary item. Keep an eye out for future stock.'],
-['Legacy T-Shirt','Cyan','£7.99','good-stock','resources/images/tshirts/tshirt4.jpg','Perfect for those graduating this year. Get a bargain whilst we have the stock.'],
-['Legacy T-Shirt','Magenta','£7.99','out-of-stock','resources/images/tshirts/tshirt5.jpg','Sadly we are sold out of this legendary item. Keep an eye out for future stock.'],
-['Legacy T-Shirt','Yellow','£7.99','last-few','resources/images/tshirts/tshirt6.jpg','Limited stock. Grab these nostalgic items before they make their way onto eBay.'],
-['Legacy T-Shirt','Black','£7.99','out-of-stock','resources/images/tshirts/tshirt7.jpg','Sadly we are sold out of this legendary item. Keep an eye out for future stock.'],
-['Legacy T-Shirt','Grey','£7.99','good-stock','resources/images/tshirts/tshirt8.jpg','Perfect for those graduating this year. Get a bargain whilst we have the stock.'],
-['Legacy T-Shirt','Burgundy','£7.99','last-few','resources/images/tshirts/tshirt9.jpg','Limited stock. Grab these nostalgic items before they make their way onto eBay.'],
-];
+var hoodies = [['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (1).jpg'],
+['UCLan Hoodie (2)','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (2).jpg'],
+['UCLan Hoodie (3)','Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (3).jpg'],
+['UCLan Hoodie (4)','Dark Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (4).jpg'],
+['UCLan Hoodie (5)','Black','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (5).jpg'],
+['UCLan Hoodie (6)','Salmon','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (6).jpg'],
+['UCLan Hoodie (7)','Burgundy','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (7).jpg'],
+['UCLan Hoodie (8)','Light Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (8).jpg'],
+['UCLan Hoodie (9)','Slate Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (9).jpg'],
+['UCLan Hoodie (10)','Orange','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (10).jpg'],
+['UCLan Hoodie (11)','Teal','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (11).jpg'],
+['UCLan Hoodie (12)','Navy','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (12).jpg'],
+['UCLan Hoodie (13)','Orange','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (13).jpg'],
+['UCLan Hoodie (14)','Creame','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (14).jpg'],
+['UCLan Hoodie (15)','Lime','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (15).jpg'],
+['UCLan Hoodie (16)','Off Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (16).jpg'],
+['UCLan Hoodie (17)','Red','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (17).jpg'],
+['UCLan Hoodie (18)','Charcoal','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (18).jpg'],
+['UCLan Hoodie (19)','Navy Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (19).jpg'],
+['UCLan Hoodie (20)','Lighter Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (20).jpg'],
+['UCLan Hoodie (21)','New Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (21).jpg'],
+['UCLan Hoodie (22)','Forest Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (22).jpg'],
+['UCLan Hoodie (23)','Ocean Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (23).jpg'],
+['UCLan Hoodie (24)','Pink','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (24).jpg'],
+['UCLan Hoodie (25)','Orange New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (25).jpg'],
+['UCLan Hoodie (26)','Black','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (26).jpg'],
+['UCLan Hoodie (27)','Light Off Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (27).jpg'],
+['UCLan Hoodie (28)','Rusty Red','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (28).jpg'],
+['UCLan Hoodie (29)','Slate Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (29).jpg'],
+['UCLan Hoodie (30)','Bright Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (30).jpg'],
+['UCLan Hoodie (31)','Bright Pink','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (31).jpg'],
+['UCLan Hoodie (32)','Burgundy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (32).jpg'],
+['UCLan Hoodie (33)','Navy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (33).jpg'],
+['UCLan Hoodie (34)','Bright Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (34).jpg']];
 
-const container = document.getElementById("t_shirts");
+var jumpers =[['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (1).jpg'],
+['UCLan Logo Jumper','Rusty Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (2).jpg'],
+['UCLan Logo Jumper','Water Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (3).jpg'],
+['UCLan Logo Jumper','White','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (4).jpg'],
+['UCLan Logo Jumper','Pink','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (5).jpg'],
+['UCLan Logo Jumper','Black','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (6).jpg'],
+['UCLan Logo Jumper','Old Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (7).jpg'],
+['UCLan Logo Jumper','Dark Grey ','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (8).jpg'],
+['UCLan Logo Jumper','Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (9).jpg'],
+['UCLan Logo Jumper','Brown','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (10).jpg'],
+['UCLan Logo Jumper','Green','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (11).jpg'],
+['UCLan Logo Jumper','Dark Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (12).jpg'],
+['UCLan Logo Jumper','Yellow','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (13).jpg'],
+['UCLan Logo Jumper','Light Grey','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (14).jpg'],
+['UCLan Logo Jumper','Light Green','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (15).jpg'],
+['UCLan Logo Jumper','Old Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (16).jpg'],
+['UCLan Logo Jumper','Light Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (17).jpg'],
+['UCLan Logo Jumper','Slate Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (18).jpg'],
+['UCLan Logo Jumper','Real Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (19).jpg'],
+['UCLan Logo Jumper','Old Pink','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (20).jpg'],
+['UCLan Logo Jumper','Slate Grey','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (21).jpg'],
+['UCLan Logo Jumper','Bright Green','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (22).jpg'],
+['UCLan Logo Jumper','Teal','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (23).jpg'],
+['UCLan Logo Jumper','Sky Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (24).jpg'],
+['UCLan Logo Jumper','Sunshine Pink','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (25).jpg'],
+['UCLan Logo Jumper','Bronze','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (26).jpg'],
+['UCLan Logo Jumper','Olive Green','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (27).jpg'],
+['UCLan Logo Jumper','Bright White Green','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (28).jpg'],
+['UCLan Logo Jumper','Navy Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (29).jpg'],
+['UCLan Logo Jumper','Rusty Orange','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (30).jpg'],
+['UCLan Logo Jumper','Bright Orange','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (31).jpg'],
+['UCLan Logo Jumper','Sky Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (32).jpg'],
+['UCLan Logo Jumper','Really Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (33).jpg'],
+['UCLan Logo Jumper','Plum Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (34).jpg'],
+['UCLan Logo Jumper','Dark Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (35).jpg'],
+['UCLan Logo Jumper','Vibrant Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (36).jpg'],
+['UCLan Logo Jumper','Ocean Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (37).jpg'],
+['UCLan Logo Jumper','Creame','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (38).jpg'],
+['UCLan Logo Jumper','Lighter Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (39).jpg'],
+['UCLan Logo Jumper','Light Grey','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (40).jpg']];
+
+var tshirts = [['UCLan Logo Tshirt','Navy Blue New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (1).jpg'],
+['UCLan Logo Tshirt','Rusty Red New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (2).jpg'],
+['UCLan Logo Tshirt','Burgundy','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (3).jpg'],
+['UCLan Logo Tshirt','Pink','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (4).jpg'],
+['UCLan Logo Tshirt','Teal','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (5).jpg'],
+['UCLan Logo Tshirt','Black','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (6).jpg'],
+['UCLan Logo Tshirt','Old Red','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (7).jpg'],
+['UCLan Logo Tshirt','Grey','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (8).jpg'],
+['UCLan Logo Tshirt','Red','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (9).jpg'],
+['UCLan Logo Tshirt','Brown','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (10).jpg'],
+['UCLan Logo Tshirt','Pdark Purple','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (11).jpg'],
+['UCLan Logo Tshirt','Yellow','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (12).jpg'],
+['UCLan Logo Tshirt','Mustard Yellow','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (13).jpg'],
+['UCLan Logo Tshirt','Dark Grey','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (14).jpg'],
+['UCLan Logo Tshirt','Dark Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (15).jpg'],
+['UCLan Logo Tshirt','Bright Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (16).jpg'],
+['UCLan Logo Tshirt','Olive Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (17).jpg'],
+['UCLan Logo Tshirt','Dark Grey','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (18).jpg'],
+['UCLan Logo Tshirt','Orange','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (19).jpg'],
+['UCLan Logo Tshirt','Purple','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (20).jpg'],
+['UCLan Logo Tshirt','Slate Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (21).jpg'],
+['UCLan Logo Tshirt','Bright Pink','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (22).jpg'],
+['UCLan Logo Tshirt','Brightly Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (23).jpg'],
+['UCLan Logo Tshirt','Lime Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (24).jpg'],
+['UCLan Logo Tshirt','Ocean Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (25).jpg'],
+['UCLan Logo Tshirt','Dark Red','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (26).jpg'],
+['UCLan Logo Tshirt','Another Green','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (27).jpg'],
+['UCLan Logo Tshirt','Slate Grey','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (28).jpg'],
+['UCLan Logo Tshirt','Bright Orange','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (29).jpg'],
+['UCLan Logo Tshirt','Another Purple','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (30).jpg'],
+['UCLan Logo Tshirt','Real Red','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (31).jpg'],
+['UCLan Logo Tshirt','Brilliant Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (32).jpg'],
+['UCLan Logo Tshirt','Creame','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (33).jpg'],
+['UCLan Logo Tshirt','Teal Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (34).jpg'],
+['UCLan Logo Tshirt','White','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirt/tshirt (35).jpg']];
+
+
+const container = document.getElementById("products");
 
 tshirts.forEach(tshirt => {
 		container.innerHTML += `
 		   <div class ="product">
 		      <img src = "${tshirt[4]}" alt="${tshirt[0]}">
 		      <p class= "name">${tshirt[0]}</p>
-		      <p class= "description">
-			  Color: ${tshirt[1]} <br>
-			  Stock: ${tshirt[3]} <br>
-			  ${tshirt[5]}
+		      <p class= "color">
+			  Color: ${tshirt[1]} 
 			  </p>
-			  <p class= "price">Price: ${tshirt[2]}</p>
+			  <p class="description">
+			  Description: ${tshirt[2]} <br>
+			  </p>
+			  <p class= "price">Price: ${tshirt[3]}</p>
+			  
+			  <button class="buy_btn">Buy</button>
+		   </div>
+		`;
+});
+
+hoodies.forEach(hoody => {
+		container.innerHTML += `
+		   <div class ="product">
+		      <img src = "${hoody[4]}" alt="${hoody[0]}">
+		      <p class= "name">${hoody[0]}</p>
+		      <p class= "color">
+			  Color: ${hoody[1]} 
+			  </p>
+			  <p class = "description">
+			  Description: ${hoody[2]} <br>
+			  </p>
+			  <p class= "price">Price: ${hoody[3]}</p>
+			  
+			  <button class="buy_btn">Buy</button>
+		   </div>
+		`;
+});
+
+
+jumpers.forEach(jumper => {
+		container.innerHTML += `
+		   <div class ="product">
+		      <img src = "${jumper[4]}" alt="${jumper[0]}">
+		      <p class= "name">${jumper[0]}</p>
+		      <p class= "color">
+			  Color: ${jumper[1]} 
+			  </p>
+			  <p class="description">
+			  Description: ${jumper[2]} <br>
+			  </p>
+			  <p class= "price">Price: ${jumper[3]}</p>
 			  
 			  <button class="buy_btn">Buy</button>
 		   </div>
