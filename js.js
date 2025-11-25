@@ -114,6 +114,8 @@ var tshirts = [['UCLan Logo Tshirt','Navy Blue New','cotton authentic character 
 
 const container = document.getElementById("products");
 
+if (container) {
+
 tshirts.forEach(tshirt => {
 		container.innerHTML += `
 		   <div class ="product">
@@ -127,7 +129,7 @@ tshirts.forEach(tshirt => {
 			  </p>
 			  <p class= "price">Price: ${tshirt[3]}</p>
 			  
-			  <button class="buy_btn">Buy</button>
+			  <button class="buy_btn" onclick='addToCart(${JSON.stringify(tshirt)})'>Buy</button>
 		   </div>
 		`;
 });
@@ -145,7 +147,7 @@ hoodies.forEach(hoody => {
 			  </p>
 			  <p class= "price">Price: ${hoody[3]}</p>
 			  
-			  <button class="buy_btn">Buy</button>
+			  <button class="buy_btn" onclick='addToCart(${JSON.stringify(hoody)})'>Buy</button>
 		   </div>
 		`;
 });
@@ -164,7 +166,44 @@ jumpers.forEach(jumper => {
 			  </p>
 			  <p class= "price">Price: ${jumper[3]}</p>
 			  
-			  <button class="buy_btn">Buy</button>
+			  <button class="buy_btn" onclick='addToCart(${JSON.stringify(jumper)})'>Buy</button>
 		   </div>
 		`;
 });
+}
+
+let cart = JSON.parse(localStorage.getItem('cart'));
+        
+        if(cart && cart.length > 0) {
+            let total = 0;
+            cart.forEach(item => {
+				console.log(item);
+				
+				let price = parseFloat(item[3].replace("£", "").trim());
+				total += price;
+				
+                document.getElementById('cartItems').innerHTML += 
+                    '<p>' + item[0] + ' - £' + price.toFixed(2) + '</p>';
+                
+            
+			 });
+            document.getElementById('cartItems').innerHTML += 
+                '<h3>Total: £' + total.toFixed(2) + '</h3>';
+        } else {
+            document.getElementById('cartItems').innerHTML = '<p>Cart is empty</p>';
+        }
+
+function addToCart(product){
+	
+	
+	let cart = JSON.parse(localStorage.getItem('cart'));
+	if(!cart) {
+		cart = [];
+	}
+	
+	cart.push(product);
+	
+	localStorage.setItem('cart', JSON.stringify(cart));
+	
+	alert('Added to cart!');
+}
