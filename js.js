@@ -207,3 +207,13 @@ function addToCart(product){
 	
 	alert('Added to cart!');
 }
+
+function openMenu(){
+	// document.getElementById("menu").classList.toggle("responsive");
+	  var x = document.getElementById("menu");
+	  if (x.className === "menu") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu";
+      }
+}
