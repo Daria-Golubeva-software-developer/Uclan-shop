@@ -13,6 +13,7 @@ const tshirts = [
 ];
 
 
+let discount = 0;
 
 const container = document.getElementById("products");
 
@@ -32,7 +33,7 @@ const container = document.getElementById("products");
                     <p class="description">${tshirt[5]}</p>
                     <p class="price">Price: ${tshirt[2]}</p>
                     <p class="View_more">
-                        <a href="item.html?id=${index}">View more</a>
+                       <a href="item.html" onclick="view_more(${index})">View more</a>
                     </p>
                     <button class="buy_btn" onclick='addToCart(${JSON.stringify(tshirt)})'>Buy</button>
                 </div>
@@ -150,24 +151,46 @@ function renderCart(){
                     </div>
 
                     <div class="cart_name">
-                        ${item.name}
+                         <a href="javascript:void(0)" onclick="Cart_Item(${index})">
+                             ${item.name}
+                         </a>
                     </div>
 					
-					<div class="cart_quantity">
-                    <button onclick="changeQuantity(${index}, -1)">−</button>
-                    <span>${item.quantity}</span>
-                    <button onclick="changeQuantity(${index}, 1)">+</button>
-                </div>
+					<div class ="cart_Buttons">
+					   <div class="cart_quantity">
+                          <button onclick="changeQuantity(${index}, -1)">−</button>
+                          <span>${item.quantity}</span>
+                          <button onclick="changeQuantity(${index}, 1)">+</button>
+                       </div>
 
-                    <div class="cart_price">
-                        £${itemTotal.toFixed(2)}
-                    </div>
+                       <div class="cart_price">
+                           £${itemTotal.toFixed(2)}	
+                       </div>
+					       <button class="remove" onclick="remove_Item(${index})">
+                             Remove
+                           </button>
+				    </div>
+					
                 </div>
 				`;
         });
+		let total_with_discount = total;
+        if (discount > 0) {
+            total_with_discount = total - (total * discount / 100);
+        }
 
         cartItemsEl.innerHTML +=
-            `<h3 class="total">Total: £${total.toFixed(2)}</h3>`;
+            `<div class="total_with_discount">
+                <div class="coupon">
+                    <input type="text" id="couponInput" placeholder="Coupon code">
+                    <button onclick="coupon_discount()">Apply</button>
+                </div>
+
+                <div class="total">
+                    <h3>Total:</h3>
+                    <h3>£${total_with_discount.toFixed(2)}</h3>
+                </div>
+            </div>`;
     } else {
         cartItemsEl.innerHTML = '<p class ="empty">Cart is empty</p>';
     }
@@ -185,27 +208,6 @@ function renderCart(){
         renderProducts(stockType);
     });
 });
-
-const item_URL = new URLSearchParams(window.location.search);
-const id = item_URL.get("id");
-
-const itemContainer = document.getElementById("item");
-
-if (itemContainer && id !== null) {
-    const product = tshirts[id];
-
-    itemContainer.innerHTML = `
-        <div class="product">
-            <img src="${product[4]}" alt="${product[0]}">
-            <p class="name">${product[0]}</p>
-            <p class="stock">Stock: ${product[3]}</p>
-            <p class="color">Color: ${product[1]}</p>
-            <p class="description">Description: ${product[5]}</p>
-            <p class="price">Price: ${product[2]}</p>
-            <button class="buy_btn" onclick='addToCart(${JSON.stringify(product)})'>Buy</button>
-        </div>
-    `;
-}
 
 const clearCartBtn = document.getElementById('clearCart');
 
@@ -226,9 +228,75 @@ if (clearCartBtn) {
 
 const topButton = document.getElementById('top');
 
-topButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (topButton) {
+    topButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+}
+
+function view_more(index) {
+    sessionStorage.setItem('selectedProduct', JSON.stringify(tshirts[index]));
+}
+
+const item_more = document.getElementById("item");
+
+if (item_more) {
+    const product = JSON.parse(sessionStorage.getItem('selectedProduct'));
+
+    if (product) {
+        item_more.innerHTML = `
+            <div class="product">
+                <img src="${product[4]}" alt="${product[0]}">
+                <p class="name">${product[0]}</p>
+                <p class="stock">Stock: ${product[3]}</p>
+                <p class="color">Color: ${product[1]}</p>
+                <p class="description">Description: ${product[5]}</p>
+                <p class="price">Price: ${product[2]}</p>
+                <button class="buy_btn" onclick='addToCart(${JSON.stringify(product)})'>Buy</button>
+            </div>
+        `;
+    } else {
+        item_more.innerHTML = '<p>Product not found</p>';
+    }
+}
+
+function Cart_Item(index) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    sessionStorage.setItem('selectedProduct', JSON.stringify([
+        cart[index].name,
+        cart[index].color,
+        cart[index].price,
+        cart[index].stock,
+        cart[index].image,
+        cart[index].description
+    ]));
+    window.location.href = "item.html";
+}
+
+function remove_Item(index) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+
+function coupon_discount() {
+    const input = document.getElementById("couponInput");
+    const code = input.value.trim().toUpperCase();
+
+    if (code === "STUDENTFEST10") {
+        discount = 10;
+        alert("Coupon applied: 10% discount");
+    } else if (code === "UCLANDISCOUNT20") {
+        discount = 20;
+        alert("Coupon applied: 20% discount");
+    } else {
+        discount = 0;
+        alert("Invalid coupon");
+    }
+
+    renderCart();
+}
