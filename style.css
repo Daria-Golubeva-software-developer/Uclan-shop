@@ -154,6 +154,7 @@ img {
 }
 
 .video1 iframe {
+	border: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -215,7 +216,15 @@ footer .links a:hover {
 .cataloge {
     font-family: Helvetica;
     text-align: center;
-    padding: 10px;
+	color: #34516C;
+}
+
+.stock_filter {
+    margin-right: 15px;    
+}
+
+.stock_filter:last-child {
+    margin-right: 0; 
 }
 
 #products {
@@ -227,6 +236,12 @@ footer .links a:hover {
     max-width: 1000px;
 }
 
+.product_heading{
+	color: #BE1622;
+    font-family: Helvetica;
+    font-size: 28px;
+	text-align: center;
+}
 .name {
     color: #BE1622;
     font-family: Helvetica;
@@ -333,6 +348,12 @@ footer .links a:hover {
 #item .buy_btn {
     font-size: 18px;
     padding: 10px 30px;
+}
+.item_product_heading{
+	color: #BE1622;
+    font-family: Helvetica;
+    font-size: 28px;
+	text-align: center;
 }
 
 .back {
