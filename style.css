@@ -1,8 +1,6 @@
+/* CSS file for website styling */
 
-
-/* =========================================================
-   Общие стили для всего сайта
-   ========================================================= */
+/* General styles for the all pages*/
 .container {
     padding: 0 20px;
 }
@@ -18,9 +16,7 @@ img {
     height: 80px;
 }
 
-/* =========================================================
-   Header (все страницы: index, products, item, cart)
-   ========================================================= */
+/* Header styles */
 .header {
     position: relative;
     background-color: #BE1622;
@@ -31,7 +27,6 @@ img {
     padding: 0 20px;
     justify-content: space-between;
     height: 130px;
-    /* flex-wrap: wrap; */
 	flex-wrap: nowrap;
 }
 
@@ -51,9 +46,7 @@ img {
     font-weight: bold;
 }
 
-/* =========================================================
-   Menu (навигация, гамбургер-меню) - все страницы
-   ========================================================= */
+/* Menu */
 .menu a {
     color: white;
     margin-left: 20px;
@@ -79,19 +72,17 @@ img {
     fill: white;
 }
 
-/* Адаптивное меню для мобильных */
+/* Adaptive menu for mobile */
 @media screen and (max-width: 600px) {
 	
 	.container {
         padding: 0 15px;
     }
 
-    /* прячем обычные ссылки */
     .menu a:not(.icon) {
         display: none;
     }
 
-    /* иконка ВСЕГДА на месте */
     .menu a.icon {
        display: block;
        position: absolute;    
@@ -100,17 +91,16 @@ img {
        transform: none;   
        z-index: 3000;
     }
-    /* выпадающее меню */
+    
     .menu.responsive {
         position: absolute;
-        top: 130px; /* высота header */
+        top: 130px; 
         left: 0;
         width: 100%;
         background-color: #BE1622;
         z-index: 1000;
     }
 
-    /* ссылки в открытом меню */
     .menu.responsive a:not(.icon) {
         display: block;
         padding: 14px 20px;
@@ -125,9 +115,7 @@ img {
     }
 }
 
-/* =========================================================
-   Index Page (главная страница)
-   ========================================================= */
+/* Index Page */
 .opportunity {
     color: #34516C;
     font-family: Helvetica;
@@ -184,9 +172,7 @@ img {
     justify-content: center;
 }
 
-/* =========================================================
-   Footer (все страницы)
-   ========================================================= */
+/* Footer */
 footer {
     margin-top: 30px;
     background-color: #34516C;
@@ -213,9 +199,7 @@ footer .links a:hover {
     }
 }
 
-/* =========================================================
-   Products Page
-   ========================================================= */
+/* Products Page */
 .product {
     width: 300px;
     border: 1px solid #007F80;
@@ -306,9 +290,7 @@ footer .links a:hover {
     }
 }
 
-/* =========================================================
-   Item Page (подробности продукта)
-   ========================================================= */
+/* Item Page */
 #item {
     display: flex;
     justify-content: center;
@@ -371,9 +353,7 @@ footer .links a:hover {
     }
 }
 
-/* =========================================================
-   Cart Page (корзина)
-   ========================================================= */
+/* Cart Page */
 .shoppingCart {
     font-family: Helvetica;
     font-size: 32px;
@@ -522,7 +502,6 @@ footer .links a:hover {
 .total h3 {
     margin: 0;
     font-size: 22px;
-    /* color: #BE1622; */
 }
 .total_with_discount {
     margin-top: 20px;
@@ -583,10 +562,7 @@ footer .links a:hover {
 }
 
 
-
-/* =========================================================
-   Общие элементы: кнопка "Top"
-   ========================================================= */
+/* Top Button */
 #top {
     position: fixed;
     bottom: 40px;

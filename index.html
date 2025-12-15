@@ -3,12 +3,15 @@
 
 <head>
 <title>Uclan Shop</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Makes the webpage responsive -->
 <link rel = "stylesheet" href = "style.css" type = "text/css">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+
+<!-- Header Section with the menu -->
   <header class = "header">
      <div class = "logo_and_text">
         <img src = "resources/images/logo_reverse.png" alt = "logo photo">
@@ -26,50 +29,46 @@
      </nav>
 </header>
 
-<div class="container">
+<!-- Main Section with welcome Information -->
+<main class="container">
+  <section class="welcome">
+    <p class="opportunity">Where opportunity creates success</p>
+    <p class="main_text">
+	Every student at The University of Central Lancashire 
+    is automatically a member of the Students' Union.
+    We are here to make life better for students - 
+    inspiring you to succeed and achieve your goals.
+	</p>
+    <p class="student_union">
+	Everything you need to know about UCLan Students' Union.
+    Your membership starts here. 
+	</p>
+    <p class="together">Together</p>
+  </section>
+  
+<!-- Section with videos -->
+  <section class="video_section">
+    <div class="video2">
+      <video controls>
+        <source src="resources/video/video.mp4" type="video/mp4">
+        Some error has occurred.
+      </video>
+    </div>
 
-<p class = "opportunity">
-Where opportunity creates success
-</p>
+    <p class="community">Join our global community</p>
 
-<p class = "main_text">
-Every student at The University of Central Lancashire 
-is automatically a member of the Students' Union.
-We are here to make life better for students - 
-inspiring you to succeed and achieve your goals.
-</p>
-
-<p class = "student_union">
-Everything you need to know about UCLan Students' Union.
-Your membership starts here. 
-</p>
-
-<p class = "together">
-Together
-</p>
-
-<div class = "video2">
-<video controls>
-  <source src="resources/video/video.mp4" type="video/mp4">
-Some error has occurred.
-</video>
-</div>
-
-<p class = "community">
-Join our global community
-</p>
-
-<div class = "video1">
-<iframe
+    <div class="video1">
+      <iframe
     src="https://www.youtube.com/embed/vzbO3x3OUJQ"
     title="Uclan video"
     frameborder="0"
     allowfullscreen
-></iframe>
-</div>
+    ></iframe>
+    </div>
+  </section>
+</main>
 
-</div>
-
+<!-- Footer Section with contact information -->
 <footer>
   <div class = "links">
      <h3>Links</h3>
@@ -95,6 +94,8 @@ Join our global community
      <p>Company number: +44 (0)1772 201201</p>
   </div>
 </footer>
+
+<!-- script to javascript file -->
 <script src="js.js"></script>
 </body>
 

@@ -3,13 +3,15 @@
 
 <head>
 <title>Products</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Makes the webpage responsive -->
 <link rel = "stylesheet" href = "style.css" type = "text/css">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
+<!-- Header Section with the menu -->
 <header class = "header">
      <div class = "logo_and_text">
         <img src = "resources/images/logo_reverse.png" alt = "logo photo">
@@ -27,20 +29,34 @@
      </nav>
 </header>
 
-<p class ="cataloge">
-products > 
-<a href="#" class="stock_filter" data-stock="all">all</a>
-<a href="#" class="stock_filter" data-stock = "good-stock">good-stock</a>
-<a href="#" class="stock_filter" data-stock = "last-few">last-few</a>
-<a href="#" class="stock_filter" data-stock = "out-of-stock">out-of-stock</a>
-</p>
+<!-- Main Section with cataloge, products, and top button -->
+<main>
+  <section class="cataloge">
+    <p class="cataloge">products > 
+      <a href="#" class="stock_filter" data-stock="all">all</a>
+      <a href="#" class="stock_filter" data-stock="good-stock">good-stock</a>
+      <a href="#" class="stock_filter" data-stock="last-few">last-few</a>
+      <a href="#" class="stock_filter" data-stock="out-of-stock">out-of-stock</a>
+    </p>
+  </section>
 
-<div id = "products"></div>
-<button id="top">Top</button>
+  <section id="products_container">
+    <div id="products"></div>
+  </section>
 
+  <button id="top">Top</button>
+</main>
+
+<!-- Footer Section with contact information -->
 <footer>
   <div class = "links">
      <h3>Links</h3>
+	 <p>
+	 <a href="https://www.uclancyprus.ac.cy/" target="_blank">UCLan Cyprus</a>
+	 </p>
+	 <p>
+     <a href="https://www.lancashire.ac.uk/campuses/cyprus" target="_blank">Lancashire Cyprus Campus</a>
+     </p>
   </div>
 
   <div class = "contact">
@@ -57,6 +73,8 @@ products >
      <p>Company number: +44 (0)1772 201201</p>
   </div>
 </footer>
+
+<!-- script to javascript file -->
 <script src="js.js"></script>
 </body>
 
