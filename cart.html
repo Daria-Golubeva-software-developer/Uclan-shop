@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Cart</title>
+<!-- Makes the webpage responsive -->
+<link rel = "stylesheet" href = "style.css" type = "text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!-- Header Section with the menu -->
+<header class = "header">
+     <div class = "logo_and_text">
+        <img src = "resources/images/logo_reverse.png" alt = "logo photo">
+        <h3>Student Shop</h3>
+	 </div>
+     <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+	  <a href="javascript:void(0);" class="icon" onclick= "openMenu()">
+		<svg class = "menu_icon" xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+		<path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+		</svg>
+      </a>
+     </nav>
+</header>
+
+<!-- Main Section with chosen items, clear and checkout buttons -->
+<main>
+  <section class="cart_section">
+    <h1 class="shoppingCart">Shopping Cart</h1>
+    <p class="cart_text">The items you've added to your shopping cart are: </p>
+    <div id="cartItems"></div>
+
+    <div class="cart_buttons">
+      <button class="clearCart" id="clearCart">Clear Cart</button>
+      <button class="checkout">Checkout</button>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Section with contact information -->
+<footer>
+  <div class = "links">
+     <h3>Links</h3>
+	 <p>
+	 <a href="https://www.uclancyprus.ac.cy/" target="_blank">UCLan Cyprus</a>
+	 </p>
+	 <p>
+     <a href="https://www.lancashire.ac.uk/campuses/cyprus" target="_blank">Lancashire Cyprus Campus</a>
+     </p>
+  </div>
+
+  <div class = "contact">
+     <h3>Contact</h3>
+     <p>Email: suinformation@uclan.ac.uk</p>
+     <p>Phone: 01772 89 3000</p>
+  </div>
+
+  <div class = "location">
+     <h3>Location</h3>
+     <p>University of Central Lancashire Students' Union.</p>
+     <p>Preston, Lancashire, UK PR1 2HE</p>
+     <p>Registered in England</p>
+     <p>Company number: +44 (0)1772 201201</p>
+  </div>
+</footer>
+
+<!-- script to javascript file -->
+<script src="js.js"></script>
+</body>
+
+</html>
