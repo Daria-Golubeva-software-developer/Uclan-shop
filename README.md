@@ -3,7 +3,8 @@
 ## Daria Golubeva G-number: 21306382
 
 ## GitHub: https://github.com/Daria-Golubeva-software-developer/Uclan-shop
-## All code files are located in development branch
+All code files are located in development branch
+
 
 ### Work completed in accordance with the Marking Criterion:
  1. **Contains a homepage (`index.html`)**  
