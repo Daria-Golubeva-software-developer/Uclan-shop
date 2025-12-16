@@ -25,8 +25,9 @@ const container = document.getElementById("products");
     container.innerHTML = "";
 
     tshirts
-        .filter(tshirt => stockFilter === "all" || tshirt[3] === stockFilter)
+        .filter(tshirt => stockFilter === "all" || tshirt[3] === stockFilter) // Filter by stock
         .forEach((tshirt, index) => {
+			// Add each product card to the container
             container.innerHTML += `
                 <article class="product">
                   <img src="${tshirt[4]}" alt="${tshirt[0]}">
@@ -36,7 +37,7 @@ const container = document.getElementById("products");
                   <p class="description">${tshirt[5]}</p>
                   <p class="price">Price: ${tshirt[2]}</p>
                   <p class="View_more">
-                     <a href="item.html" onclick="view_more(${index})">View more</a>
+                     <a href="item.html" onclick='view_more(${JSON.stringify(tshirt)})'>View more</a>
                   </p>
                   <button class="buy_btn" onclick='addToCart(${JSON.stringify(tshirt)})'>Buy</button>
                 </article>
@@ -52,6 +53,11 @@ if (container) {
 // Function that adds a product to the shopping cart in localStorage
 function addToCart(product){
 	
+	// Checking the product status
+	if (product[3] === 'out-of-stock') {
+        alert('This product is out of stock and cannot be added to the shopping cart.');
+        return; 
+    }
 	
 	let cart = JSON.parse(localStorage.getItem('cart'));
 	if(!cart) {
@@ -63,8 +69,10 @@ function addToCart(product){
     );
 	
 	if (existingItem) {
+		// Increase quantity if product exists
         existingItem.quantity += 1;   
     } else {
+		// Add new product to cart
         cart.push({
             name: product[0],
             color: product[1],
@@ -75,7 +83,7 @@ function addToCart(product){
             quantity: 1
         });
     }
-	
+	// Save updated cart to localStorage
 	localStorage.setItem('cart', JSON.stringify(cart));
 	
 	alert('Added to cart!');
@@ -105,9 +113,10 @@ function changeQuantity(index, change) {
     let cart = JSON.parse(localStorage.getItem('cart'));
 
     cart[index].quantity += change;
-
+	
+	// Remove item if quantity is 0
     if (cart[index].quantity <= 0) {
-        cart.splice(index, 1); // удалить товар
+        cart.splice(index, 1); 
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -129,6 +138,7 @@ function renderCart(){
             let itemTotal = price * item.quantity;
             total += itemTotal;
 
+            // Render each cart item
             cartItemsEl.innerHTML +=
                 `<div class="cart_item">
                     <div class="cart_image">
@@ -167,6 +177,7 @@ function renderCart(){
             total_with_discount = total - (total * discount / 100);
         }
 
+        // Render total and coupon input
         cartItemsEl.innerHTML +=
             `<div class="total_with_discount">
                 <div class="coupon">
@@ -188,9 +199,12 @@ function renderCart(){
  document.querySelectorAll(".stock_filter").forEach(btn => {
     btn.addEventListener("click", function(e) {
         e.preventDefault();
+		// Remove the active class from all buttons
         document.querySelectorAll(".stock_filter").forEach(b => b.classList.remove("active"));
+		// Add an active class to the pressed button
         this.classList.add("active");
         const stockType = this.dataset.stock;
+		// Filter products by stock
         renderProducts(stockType);
     });
 });
@@ -200,7 +214,8 @@ const clearCartBtn = document.getElementById('clearCart');
 
 if (clearCartBtn) {
     clearCartBtn.addEventListener('click', () => {
-        
+		
+        // Remove cart from localStorage
         localStorage.removeItem('cart');
 
         
@@ -226,8 +241,8 @@ if (topButton) {
 }
 
 // Function that stores selected product in sessionStorage
-function view_more(index) {
-    sessionStorage.setItem('selectedProduct', JSON.stringify(tshirts[index]));
+function view_more(product) {
+    sessionStorage.setItem('selectedProduct', JSON.stringify(product));
 }
 
 // Display the product on item page
@@ -264,6 +279,7 @@ function Cart_Item(index) {
         cart[index].image,
         cart[index].description
     ]));
+	// Redirect to the item page
     window.location.href = "item.html";
 }
 
@@ -290,6 +306,6 @@ function coupon_discount() {
         discount = 0;
         alert("Invalid coupon");
     }
-
+	// Recalculate the total amount after applying the coupon
     renderCart();
 }
